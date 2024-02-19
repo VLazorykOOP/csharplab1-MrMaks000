@@ -68,6 +68,7 @@ class Program
         Console.Write("Enter a two significant number: ");
         number = Convert.ToInt32(Console.ReadLine());
 
+
         if (Math.Abs(number) > 99 || Math.Abs(number) < 10)
         {
             Console.WriteLine("wrong number entered");
@@ -106,20 +107,32 @@ class Program
         Console.WriteLine("Enter the coordinate y:");
         y = Convert.ToDouble(Console.ReadLine());
 
+        
+        
+
         functionValue = -Math.Abs(x);
 
-        if (y > functionValue)
-        {
-            Console.WriteLine("true");
-        }
-        else if (y < functionValue)
+        if (x * x + y * y > 25)
         {
             Console.WriteLine("false");
         }
-        else
+        else if (x * x + y * y == 25)
         {
             Console.WriteLine("On the border");
         }
+        else if (y < functionValue)
+        {
+            Console.WriteLine("true");
+        }
+        else if (y == functionValue)
+        {
+            Console.WriteLine("On the border");
+        }
+        else if (y > functionValue)
+        {
+            Console.WriteLine("false");
+        }
+        
     }
 
     static void task4()
