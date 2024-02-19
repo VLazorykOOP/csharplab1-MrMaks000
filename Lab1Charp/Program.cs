@@ -1,7 +1,43 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
- static void task1()
+class Program
 {
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Lab 1 !");
+
+        while (true)
+        {
+            Console.WriteLine("\nEnter number of task");
+            int NumberOfTask = Convert.ToInt32(Console.ReadLine());
+
+            switch (NumberOfTask)
+            {
+                case 1:
+                    task1();
+                    break;
+                case 2:
+                    task2();
+                    break;
+                case 3:
+                    task3();
+                    break;
+                case 4:
+                    task4();
+                    break;
+                case 5:
+                    task5();
+                    break;
+                case 6:
+                    task6();
+                    break;
+                default: break;
+            }
+        }
+    }
+
+    static void task1()
+    {
         //периметр прямокутного трикутника за двома катетами?
         double firstCat;
         double secondCat;
@@ -58,6 +94,8 @@
         //на її межі. Області задаються наступним чином: 
         //y = -| x |
 
+        Console.WriteLine("\nTask3 !");
+
         double x;
         double y;
         double functionValue;
@@ -86,6 +124,11 @@
 
     static void task4()
     {
+        //Дано ціле число m>0. З деякою дати по теперішній день пройшло m 
+        //місяців, визначити назву місяця невідомої дати.
+
+        Console.WriteLine("\nTask4 !");
+
         Console.WriteLine("Enter the number of months that have passed:");
         int m = Convert.ToInt32(Console.ReadLine());
 
@@ -94,12 +137,14 @@
 
         string monthName = unknownDate.ToString("MMMM");
         Console.WriteLine($"Month of unknown date: {monthName}");
-
-        Console.ReadLine();
     }
 
     static void task5()
     {
+        //Реалізувати функцію обчислення частки двох дійсних чисел.
+
+        Console.WriteLine("\nTask5 !");
+
         double dividend = 10.0;
         double divisor = 3;
 
@@ -129,8 +174,13 @@
 
     static void task6()
     {
-        double a = 10.0;
-        double b = 3;
+        //За введеними з клавіатури значеннями обчислити та 
+        //вивести на екран значення виразу
+
+        Console.WriteLine("\nTask6 !");
+
+        double a;
+        double b;
 
         Console.WriteLine("Enter the a:");
         a = Convert.ToDouble(Console.ReadLine());
@@ -145,6 +195,6 @@
     }
 
 
-
+   
 }
 
